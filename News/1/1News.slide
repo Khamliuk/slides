@@ -26,7 +26,3 @@ nikita.khamliuk@itechart-group.com
 * Module flow
 
 .image module_flow.png 580 600
-
-* Just interesting
-
-.play examples.go /^func main/,/^}/
