@@ -1,0 +1,36 @@
+Новостной свежачок #1
+Пилотный выпуск.
+
+Хамлюк Никита
+Golang разработчик D6.G1, iTechArt
+nikita.khamliuk@itechart-group.com
+
+* Awesome Go
+
+.link https://go.libhunt.com Сайт
+
+* Golang Guide: A List of Top Golang Frameworks, IDEs & Tools
+
+.link https://bit.ly/2SK4vyo Статья
+
+* Go Modules in 2019
+
+: Notes
+
+- Releases
+- Tooling & IDE Integration
+- Module Index
+- Module Authentication
+- Module Mirrors
+
+* Module flow
+
+.image module_flow.png 580 600
+
+* Just interesting
+
+.code -edit examples.go
+
+* some
+
+.play examples.go /^func main/,/^}/
