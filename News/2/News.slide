@@ -1,0 +1,33 @@
+Новостной свежачок #2
+
+
+Хамлюк Никита
+Golang разработчик D6.G1, iTechArt
+nikita.khamliuk@itechart-group.com
+
+* Go 1.12 (beta) Release Notes
+
+- The race detector is now supported on linux/arm64.
+- Go 1.12 is the last release that will support binary-only packages.
+- Modules
+- Inlining
+- Runtime (GC)
+- TLS 1.3
+- Library
+    - bytes
+    - fmt
+    - net/http
+    - os
+    - strings
+    - testing
+
+.link https://tip.golang.org/doc/go1.12#introduction Ссылка
+
+* App Engine standard in Go: en route to 1.11
+
+- Imports/vendor
+- Default HTTP client
+- Apps are no more tied to App Engine
+- Go modules are supported
+
+.link https://medium.com/@val_deleplace/app-engine-standard-in-go-en-route-to-1-11-6c65cb7f664b Ссылка
