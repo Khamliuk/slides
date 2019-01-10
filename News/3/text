@@ -1,0 +1,59 @@
+Runtime - Go 1.12 значительно повышает производительность очистки,
+    когда большая часть кучи остается в рабочем состоянии.
+    Это уменьшает задержку выделения сразу после сборки мусора.
+    Среда выполнения Go теперь более активно высвобождает память операционной системе,
+    особенно в ответ на большие выделения,
+    которые не могут повторно использовать существующее пространство кучи.
+    В Linux среда выполнения Go теперь освобождает память обратно в операционную систему только тогда,
+    когда ОС испытывает нехватку памяти.
+Изменения в библиотке:
+ - bytes:
+    новая функция ReplaceAll
+
+ - fmt:
+     Maps are now printed in key-sorted order to ease testing. The ordering rules are:
+
+     - When applicable, nil compares low
+     - ints, floats, and strings order by <
+     - NaN compares less than non-NaN floats
+     - bool compares false before true
+     - Complex compares real, then imaginary
+     - Pointers compare by machine address
+     - Channel values compare by machine address
+     - Structs compare each field in turn
+     - Arrays compare each element in turn
+     - Interface values compare first by reflect.Type describing the concrete type and then by concrete value as described in the previous rules.
+
+ - net/http:
+     Теперь HTTP сервер отклоняет неправильные запросы к HTTPS серверам с 400 ошибкой
+     Транспорт теперь не обрабатывает значение MAX_CUNCURRENT_STREAMS как это было в 1.10 и 1.11
+     Дефолтное поведение теперь будет как в версии 1.9
+
+ - os:
+     Новый метод ProcessState.ExitCode возвращает код выхода процесса
+     Новая функция UserHomeDir возвращающая текущую домашнюю директурию юзера
+     RemoveAll теперь поддерживает путь больше 4096 символов для большинства Unix систем
+
+ - strings:
+     новая функция ReplaceAll
+
+ - testing:
+    бенчмарки и значение ...x
+
+
+Go 1.11 App engine
+- Старые ограничения были удалены: теперь любой пакет можно импортировать и вендорить; файловая система доступна (в /tmp); и можно использовать обычные HTTP-клиенты.
+- Приложения больше не привязаны к App Engine. Вы можете написать веб-сервер go идиоматическим способом и разместить его в любом месте.
+- Go модули поддерживаются.
+
+Плохая новость заключается в том, что не все API-интерфейсы App Engine имеют простую замену.
+Хорошей новостью является то, что все API-интерфейсы App Engine по-прежнему работают во время выполнения go111.
+
+Поддержка go 111в 2019-2020
+
+If you’re still using `goapp` (from the “original” App Engine SDK for Go) to deploy to prod (to the cloud), forget about it.
+Now I deploy with
+$ gcloud app deploy
+
+.link https://medium.com/@val_deleplace/app-engine-standard-in-go-en-route-to-1-11-6c65cb7f664b Ссылка
+

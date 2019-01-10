@@ -1,0 +1,30 @@
+Новостной свежачок #3
+
+
+Хамлюк Никита
+Golang разработчик D6.G1, iTechArt
+nikita.khamliuk@itechart-group.com
+
+* Beware of copying mutexes in Go
+Value
+.code value.go /START OMIT/,/END OMIT/
+.play value.go /^func main/,/^}/
+
+.link https://eli.thegreenplace.net/2018/beware-of-copying-mutexes-in-go Ссылка
+
+* Beware of copying mutexes in Go
+Pointer
+.code pointer.go /START OMIT/,/END OMIT/
+.play pointer.go /^func main/,/^}/
+
+* Stop writing broken Go libraries
+
+.link https://0x46.net/thoughts/2018/12/29/go-libraries/ Ссылка
+
+* The office coffee model of concurrent garbage collection
+
+.link https://dave.cheney.net/2018/12/28/the-office-coffee-model-of-concurrent-garbage-collection Ссылка
+
+* The state of gRPC in the browser
+
+.link https://grpc.io/blog/state-of-grpc-web ссылка
