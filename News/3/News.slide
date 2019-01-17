@@ -6,16 +6,8 @@ Golang разработчик D6.G1, iTechArt
 nikita.khamliuk@itechart-group.com
 
 * Beware of copying mutexes in Go
-Value
-.code value.go /START OMIT/,/END OMIT/
-.play value.go /^func main/,/^}/
 
 .link https://eli.thegreenplace.net/2018/beware-of-copying-mutexes-in-go Ссылка
-
-* Beware of copying mutexes in Go
-Pointer
-.code pointer.go /START OMIT/,/END OMIT/
-.play pointer.go /^func main/,/^}/
 
 * Stop writing broken Go libraries
 
@@ -25,6 +17,13 @@ Pointer
 
 .link https://dave.cheney.net/2018/12/28/the-office-coffee-model-of-concurrent-garbage-collection Ссылка
 
-* The state of gRPC in the browser
+* Зарелизили Go 1.12 beta 2.
 
-.link https://grpc.io/blog/state-of-grpc-web ссылка
+Кратко о главном для ленивых:
+👉 Сделали поддержку рейс детектора на linux/arm64.
+👉 Эта версия - последняя с поддержкой FreeBSD 10 и macOS 10.10 Yosemite.
+👉 cgo теперь работает и на linux/ppc64.
+👉 go tool vet уже не работат, юзайте просто go vet.
+👉 godoc теперь просто запускает веб-сервер с докой, а клишка теперь go doc.
+👉 Сборка мусора стала еще быстрее.
+👉 syscall/js поменяли Callback и NewCallback функции переименовали на  Func and FuncOf, рефакторите.
