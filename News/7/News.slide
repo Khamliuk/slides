@@ -5,10 +5,6 @@
 Golang разработчик D6.G1, iTechArt
 nikita.khamliuk@itechart-group.com
 
-* Release Go 1.12
-
-.image go-1-12.png
-
 * Practical Go: Real world advice for writing maintainable Go programs
 
 .link https://dave.cheney.net/practical-go/presentations/qcon-china.html Ссылка на оригинал
